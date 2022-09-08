@@ -3,8 +3,8 @@ from discord.ext import commands
 
 #config
 TOKEN = "INPUT_HERE" #Your Bot Token
-WELCOME_CHANNEL = "INPUT_HERE" #Id of the channel for welcome message
-LEAVE_CHANNEL = "INPUT_HERE" #Id of channel for leave messages
+WELCOME_CHANNEL = PASTE_HERE #Id of the channel for welcome message
+LEAVE_CHANNEL = PASTE_HERE #Id of channel for leave messages
 
 #prefix-settings
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
