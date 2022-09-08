@@ -11,7 +11,7 @@ bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 
 #online-statement
 @bot.event
-async def on ready():
+async def on_ready():
     print("Bot is now Online")
 
 #bot-command-test
@@ -21,7 +21,7 @@ async def test(ctx):
 
 #welcome-message
 @bot.event
-async def on.member_join(member):
+async def on_member_join(member):
     channel=bot.get_channel(WELCOME_CHANNEL)
     embed=discord.Embed(title=":wave: Welcome!", description=f"Hello {member.mention}, thanks for joining!", color=0xe83223)
     embed.add_field(name="We are so glad you made it!", value=f"We have approached {len(set(bot.users))} members now!!!")
@@ -30,7 +30,7 @@ async def on.member_join(member):
 
 #leave-message
 @bot.event
-async def on.member_remove(member):
+async def on_member_remove(member):
     channel=bot.get_channel(LEAVE_CHANNEL)
     embed=discord.Embed(title=":wave: Bye!", description=f"{member.mention} just left :(", color=0xe83223)
     embed.add_field(name="Why would someone leave?", value=f"We are now {len(set(bot.users))} members...")
