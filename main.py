@@ -58,15 +58,15 @@ async def userinfo(ctx, member:discord.Member=None):
        embed=discord.Embed(title=f"Userinfo for {member.display_name}", color=0xcbceff)
        embed.add_field(name="Name:", value=f"```{member}```")
        embed.add_field(name="Status:", value=f"```{member.status}```")
-       embed.add_field(name="Joined Server:", value= f"<t:{int(member.joined_at.timestap())}:R>")
-       embed.add_field(name="Joined Discord:", value= f"<t:{int(member.created_at.timestap())}:R>")
+       embed.add_field(name="Joined Server:", value= f"<t:{int(member.joined_at.timestamp())}:R>")
+       embed.add_field(name="Joined Discord:", value= f"<t:{int(member.created_at.timestamp())}:R>")
        await ctx.send(embed=embed)
      else:
        embed=discord.Embed(title=f"Userinfo for {ctx.author.display_name}", color=0xcbceff)
        embed.add_field(name="Name:", value=f"```{ctx.author}```")
        embed.add_field(name="Status:", value=f"```{ctx.author.status}```")
-       embed.add_field(name="Joined Server:", value=f"<t:{int(ctx.author.joined_at.timestap())}:R>")
-       embed.add_field(name="Joined Discord:", value=f"<t:{int(ctx.author.created_at.timestap())}:R>")
+       embed.add_field(name="Joined Server:", value=f"<t:{int(ctx.author.joined_at.timestamp())}:R>")
+       embed.add_field(name="Joined Discord:", value=f"<t:{int(ctx.author.created_at.timestamp())}:R>")
        await ctx.send(embed=embed)
 
 
