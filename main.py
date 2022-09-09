@@ -3,9 +3,9 @@ from discord.ext import commands
 
 #config
 TOKEN = "PASTE_HERE" #Your Bot Token
-VERIFY_ROLE_ID = [PASTE_HERE] #The Role Id of the verification role
 WELCOME_CHANNEL = PASTE_HERE #Id of the channel for welcome message
-LEAVE_CHANNEL = PASTE_HERE #Id of channel for leave messages
+LEAVE_CHANNEL = PASTE_HERE #Id of channel for leave message
+VERIFY_ROLE_ID = [PASTE_HERE] #Id of verification role
 
 #prefix-settings
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
