@@ -62,11 +62,11 @@ async def userinfo(ctx, member:discord.Member=None):
        embed.add_field(name="Joined Discord:", value=f"```{member.created_at}```")
        await ctx.send(embed=embed)
      else:
-       embed=discord.Embed(title=f"Userinfo for {author.display_name}", color=0xcbceff)
-       embed.add_field(name="Name:", value=f"```{author}```")
-       embed.add_field(name="Status:", value=f"```{author.status}```")
-       embed.add_field(name="Joined Server:", value=f"```{author.joined_at}```")
-       embed.add_field(name="Joined Discord:", value=f"```{author.created_at}```")
+       embed=discord.Embed(title=f"Userinfo for {ctx.author.display_name}", color=0xcbceff)
+       embed.add_field(name="Name:", value=f"```{ctx.author}```")
+       embed.add_field(name="Status:", value=f"```{ctx.author.status}```")
+       embed.add_field(name="Joined Server:", value=f"```{ctx.author.joined_at}```")
+       embed.add_field(name="Joined Discord:", value=f"```{ctx.author.created_at}```")
        await ctx.send(embed=embed)
 
 
