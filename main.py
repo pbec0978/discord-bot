@@ -6,6 +6,7 @@ TOKEN = "PASTE_HERE" #Your Bot Token
 WELCOME_CHANNEL = PASTE_HERE #ID of the channel for welcome message
 LEAVE_CHANNEL = PASTE_HERE #ID of channel for leave message
 VERIFY_ROLE_ID = PASTE_HERE #ID of role for verified users
+
 #prefix-settings
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 
