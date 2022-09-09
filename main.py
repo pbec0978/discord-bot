@@ -13,10 +13,7 @@ bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 @bot.event
 async def on_ready():
     print("Bot is now Online")
-
-async def status_task():
-    while True:
-       await bot.change_presence(status=discord.Status.dnd, activity=discord.Streaming("!test")
+    await bot.change_presence(status=discord.Status.dnd, activity=discord.Streaming("!test"))
 
 #bot-command-test
 @bot.command()
