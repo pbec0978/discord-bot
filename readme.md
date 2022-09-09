@@ -10,8 +10,8 @@
 - welcome & leave message
 
 ### Incoming:
-- invite Tracker
-- just Recomend Stuff, I'll make it
+- invite tracker
+- just recommend stuff, I'll make it
 
 ### Requirements:
 - brain
