@@ -63,5 +63,4 @@ async def userinfo(ctx, member:discord.Member=None):
        embed.add_field(name="Joined Discord:", value=f"<t:{int(ctx.author.created_at.timestamp())}:R>")
        await ctx.send(embed=embed)
 
-
 bot.run(TOKEN)
