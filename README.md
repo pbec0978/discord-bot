@@ -25,4 +25,4 @@
 ---
 
 <p align="center">
-    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/sumzum/discord-bot?style=for-the-badge&logo=stylelint&color=black"
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/sumzum/discord-bot?style=for-the-badge&logo=stylelint&color=black">
