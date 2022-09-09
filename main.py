@@ -14,11 +14,11 @@ bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 @bot.event
 async def on_ready():
     print("Bot is now Online")
-    await bot.change_presence(status=discord.Status.dnd, activity=discord.Game("!static"))
+    await bot.change_presence(status=discord.Status.dnd, activity=discord.Game("!hi"))
 
 #bot-command-test
 @bot.command()
-async def static(ctx):
+async def hi(ctx):
   await ctx.send(":wave:")
 
 #welcome-message
