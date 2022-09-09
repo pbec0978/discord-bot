@@ -54,23 +54,20 @@ async def verify(ctx, role:discord.Role=None):
 #userinfo-embed
 @bot.command()
 async def userinfo(ctx, member:discord.Member=None):
-     if member
-       embed=discord.Embed(title=f"Userinfo for {member.display_name}", color=0xcbceff")
+     if member:
+       embed=discord.Embed(title=f"Userinfo for {member.display_name}", color=0xcbceff)
        embed.add_field(name="Name:", value=f"```{member}```")
        embed.add_field(name="Status:", value=f"```{member.status}```")
        embed.add_field(name="Joined Server:", value=f"```{member.joined_at}```")
        embed.add_field(name="Joined Discord:", value=f"```{member.created_at}```")
        await ctx.send(embed=embed)
-
-async def userinfo(ctx, member:discord.Member=None):
-     if member
-       embed=discord.Embed(title=f"Userinfo for {author.display_name}", color=0xcbceff")
+     else:
+       embed=discord.Embed(title=f"Userinfo for {author.display_name}", color=0xcbceff)
        embed.add_field(name="Name:", value=f"```{author}```")
        embed.add_field(name="Status:", value=f"```{author.status}```")
        embed.add_field(name="Joined Server:", value=f"```{author.joined_at}```")
        embed.add_field(name="Joined Discord:", value=f"```{author.created_at}```")
        await ctx.send(embed=embed)
-
 
 
 bot.run(TOKEN)
