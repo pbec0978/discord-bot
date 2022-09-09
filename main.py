@@ -2,7 +2,8 @@ import os, time, asyncio, json, discord
 from discord.ext import commands
 
 #config
-TOKEN = "INPUT_HERE" #Your Bot Token
+TOKEN = "PASTE_HERE" #Your Bot Token
+VERIFY_ROLE_ID = [PASTE_HERE] #The Role Id of the verification role
 WELCOME_CHANNEL = PASTE_HERE #Id of the channel for welcome message
 LEAVE_CHANNEL = PASTE_HERE #Id of channel for leave messages
 
@@ -37,5 +38,17 @@ async def on_member_remove(member):
     embed.add_field(name="Won't miss you", value=f"```We are now {len(set(bot.users))} members...```")
     embed.set_image(url="https://cdn.discordapp.com/attachments/883805723807588423/901580387950686259/zerotwo_ist_scheie.gif")
     await channel.send(embed=embed)
+
+#verify-role
+@bot.command()
+async def verify(ctx, role:discord.Role=None):
+    if role is None:
+       await ctx.send("Please use this command by tagging @Verified at the end!")
+    else:
+       if role.id in VERIFY_ROLE_ID
+          await ctx.author.add_roles(role)
+          await ctx.send(f"You have successfully verified. Congrats :tada:")
+       else:
+          await ctx.send("Funny you... please only tag @Verified")
 
 bot.run(TOKEN)
