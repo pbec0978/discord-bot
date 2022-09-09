@@ -1,4 +1,4 @@
-<h1 align="center">Discord Bot</h1>
+<h1 align="center">Discord Bot.</h1>
 
 `A simple but yet great Discord Bot.`
 
