@@ -39,6 +39,7 @@ async def on_member_remove(member):
     embed.set_image(url="https://cdn.discordapp.com/attachments/883805723807588423/901580387950686259/zerotwo_ist_scheie.gif")
     await channel.send(embed=embed)
 
+#verification
 @bot.command()
 async def verify(ctx):
     role = ctx.guild.get_role(VERIFY_ROLE_ID)
