@@ -45,7 +45,7 @@ async def verify(ctx, role:discord.Role=None):
     if role is None:
        await ctx.send("Please use this command by tagging @Verified at the end!")
     else:
-       if role.id in VERIFY_ROLE_ID
+       if role.id in VERIFY_ROLE_ID:
           await ctx.author.add_roles(role)
           await ctx.send(f"You have successfully verified. Congrats :tada:")
        else:
