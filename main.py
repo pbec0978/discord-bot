@@ -3,10 +3,9 @@ from discord.ext import commands
 
 #config
 TOKEN = "PASTE_HERE" #Your Bot Token
-WELCOME_CHANNEL = PASTE_HERE #Id of the channel for welcome message
-LEAVE_CHANNEL = PASTE_HERE #Id of channel for leave message
-VERIFY_ROLE_ID = [PASTE_HERE] #Id of verification role
-
+WELCOME_CHANNEL = PASTE_HERE #ID of the channel for welcome message
+LEAVE_CHANNEL = PASTE_HERE #ID of channel for leave message
+VERIFY_ROLE_ID = PASTE_HERE #ID of role for verified users
 #prefix-settings
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 
@@ -39,16 +38,16 @@ async def on_member_remove(member):
     embed.set_image(url="https://cdn.discordapp.com/attachments/883805723807588423/901580387950686259/zerotwo_ist_scheie.gif")
     await channel.send(embed=embed)
 
-#verify-command
+#verify-role
 @bot.command()
 async def verify(ctx, role:discord.Role=None):
     if role is None:
-       await ctx.send("Please use this command by tagging @Verified at the end!")
+       await ctx.send(f"Please use this command with tagging <@&{VERIFY_ROLE_ID}> at the end!")
     else:
-       if role.id in VERIFY_ROLE_ID:
+       if role.id == VERIFY_ROLE_ID:
           await ctx.author.add_roles(role)
           await ctx.send(f"You have successfully verified. Congrats :tada:")
        else:
-          await ctx.send("Funny you... please only tag @Verified")
+          await ctx.send(f"Funny you... please only tag the <@&{VERIFY_ROLE_ID}> role!")
 
 bot.run(TOKEN)
