@@ -23,6 +23,3 @@
 - run `pip install discord.py, asyncio`
 - exchange lines 5-8 with your matching data
 ---
-
-<p align="center">
-    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/sumzum/discord-bot?style=for-the-badge&logo=stylelint&color=black">
