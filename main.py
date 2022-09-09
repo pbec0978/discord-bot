@@ -39,17 +39,11 @@ async def on_member_remove(member):
     embed.set_image(url="https://cdn.discordapp.com/attachments/883805723807588423/901580387950686259/zerotwo_ist_scheie.gif")
     await channel.send(embed=embed)
 
-#verify-role
 @bot.command()
-async def verify(ctx, role:discord.Role=None):
-    if role is None:
-       await ctx.send(f"Please use this command with tagging <@&{VERIFY_ROLE_ID}> at the end!")
-    else:
-       if role.id == VERIFY_ROLE_ID:
-          await ctx.author.add_roles(role)
-          await ctx.send(f"You have successfully verified. Congrats :tada:")
-       else:
-          await ctx.send(f"Funny you... please only tag the <@&{VERIFY_ROLE_ID}> role!")
+async def verify(ctx):
+    role = ctx.guild.get_role(VERIFY_ROLE_ID)
+    await ctx.author.add_roles(role)
+    await ctx.send(f"The <@&{VERIFY_ROLE_ID}> role has successfully been added to you. Congrats! :tada:")
 
 #userinfo-embed
 @bot.command()
