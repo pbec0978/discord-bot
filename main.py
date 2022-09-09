@@ -23,7 +23,7 @@ async def test(ctx):
 @bot.event
 async def on_member_join(member):
     channel=bot.get_channel(WELCOME_CHANNEL)
-    embed=discord.Embed(title=":wave: | Welcome", description=f"Hello {member.mention}, thanks for joining!", color=0xe83223)
+    embed=discord.Embed(title=":wave: | Welcome", description=f"Hello {member.mention}, thanks for joining!", color=0xcbceff)
     embed.add_field(name="Verify to access all channels!", value=f"```Your position in the server: {len(set(bot.users))}```")
     embed.set_image(url="https://cdn.discordapp.com/attachments/883805723807588423/901580387950686259/zerotwo_ist_scheie.gif")
     await channel.send(embed=embed)
@@ -32,7 +32,7 @@ async def on_member_join(member):
 @bot.event
 async def on_member_remove(member):
     channel=bot.get_channel(LEAVE_CHANNEL)
-    embed=discord.Embed(title=":thumbsdown: | Bye", description=f"{member.mention} just left...", color=0xe83223)
+    embed=discord.Embed(title=":thumbsdown: | Bye", description=f"{member.mention} just left...", color=0xcbceff)
     embed.add_field(name="Won't miss you", value=f"```We are now {len(set(bot.users))} members...```")
     embed.set_image(url="https://cdn.discordapp.com/attachments/883805723807588423/901580387950686259/zerotwo_ist_scheie.gif")
     await channel.send(embed=embed)
