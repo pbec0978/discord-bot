@@ -6,6 +6,7 @@ TOKEN = "PASTE_HERE" #Your Bot Token
 WELCOME_CHANNEL = PASTE_HERE #ID of the channel for welcome message
 LEAVE_CHANNEL = PASTE_HERE #ID of channel for leave message
 VERIFY_ROLE_ID = PASTE_HERE #ID of role for verified users
+AUTODELETE_CHANNEL = PASTE_HERE #ID of channel where messages should automatically be deleted
 
 #prefix-settings
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
@@ -64,4 +65,22 @@ async def userinfo(ctx, member:discord.Member=None):
        embed.add_field(name="Joined Discord:", value=f"<t:{int(ctx.author.created_at.timestamp())}:R>")
        await ctx.send(embed=embed)
 
+#command= !clear
+@commands.has_permissions(manage_messages=True)
+@bot.command()
+async def clear(ctx, count=1):
+    messages = await ctx.channel.purge(limit=count+1)
+    await ctx.send(f'{len(messages)-1} were deleted!', delete_after=5)
+    
+#autodelete-channel
+@bot.event
+async def on_message(message):
+    await bot.process_commands(message)
+    if message.channel.is == AUTODELETE_CHANNEL:
+        await asyncio.sleep(5)
+        if message.pinned:
+            return
+        await message.delete
+        
 bot.run(TOKEN)
+
