@@ -31,4 +31,5 @@
 - run `pip install discord.py, asyncio`
 - create discord server and bot (enable all intents!)
 - exchange lines 5-9 with your matching data
+- have fun!
 ---
