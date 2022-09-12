@@ -76,7 +76,7 @@ async def clr(ctx, count=1):
 async def on_message(message):
     await bot.process_commands(message)
     if message.channel.id == AUTODELETE_CHANNEL:
-        await asyncio.sleep(1)
+        await asyncio.sleep(3)
         if message.pinned:
           return
         await message.delete()
