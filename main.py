@@ -66,21 +66,19 @@ async def userinfo(ctx, member:discord.Member=None):
        await ctx.send(embed=embed)
 
 #command= !clear
-@commands.has_permissions(manage_messages=True)
 @bot.command()
 async def clear(ctx, count=1):
     messages = await ctx.channel.purge(limit=count+1)
     await ctx.send(f'{len(messages)-1} were deleted!', delete_after=5)
-    
+
 #autodelete-channel
 @bot.event
 async def on_message(message):
     await bot.process_commands(message)
-    if message.channel.is == AUTODELETE_CHANNEL:
-        await asyncio.sleep(5)
+    if message.channel.id == AUTODELETE:
+        await asyncio.sleep(1)
         if message.pinned:
-            return
-        await message.delete
+          return
+        await message.delete()
         
 bot.run(TOKEN)
-
