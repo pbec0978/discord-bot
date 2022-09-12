@@ -65,9 +65,9 @@ async def userinfo(ctx, member:discord.Member=None):
        embed.add_field(name="Joined Discord:", value=f"<t:{int(ctx.author.created_at.timestamp())}:R>")
        await ctx.send(embed=embed)
 
-#command= !clear
+#command= !clr
 @bot.command()
-async def clear(ctx, count=1):
+async def clr(ctx, count=1):
     messages = await ctx.channel.purge(limit=count+1)
     await ctx.send(f'{len(messages)-1} were deleted!', delete_after=5)
 
