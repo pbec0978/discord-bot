@@ -17,7 +17,7 @@
 ### Commands:
 - !verify (adds verified role to a member)
 - !userinfo (gets your userinfo, tag someone after the command to get theirs)
-- !clear 5 (deletes last 5 sent message, works with any number at th end)
+- !clr 5 (deletes last 5 sent message, works with any number at th end)
 - !hi (get a custom message from the bot, chosen by you)
 - everything else works without commands!!!
 
