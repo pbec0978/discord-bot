@@ -75,7 +75,7 @@ async def clear(ctx, count=1):
 @bot.event
 async def on_message(message):
     await bot.process_commands(message)
-    if message.channel.id == AUTODELETE:
+    if message.channel.id == AUTODELETE_CHANNEL:
         await asyncio.sleep(1)
         if message.pinned:
           return
