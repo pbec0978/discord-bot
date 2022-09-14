@@ -14,7 +14,7 @@ bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 #online-statement & bot-presence/status
 @bot.event
 async def on_ready():
-    print("Bot is now Online")
+    print("Bot is now Ready and Online!")
     await bot.change_presence(status=discord.Status.dnd, activity=discord.Game("!hi"))
 
 #bot-command-test
