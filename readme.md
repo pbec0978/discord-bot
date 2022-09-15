@@ -28,7 +28,7 @@
 ### Setup:
 - have python and pip installed
 - download the current version of the bot
-- run `pip install discord.py, asyncio`
+- run `pip install -r requirements.txt`
 - create discord server and bot (enable all intents!)
 - exchange lines 5-9 with your matching data
 - have fun!
