@@ -1,4 +1,4 @@
-import os, time, asyncio, json, discord
+import asyncio, discord
 from discord.ext import commands
 
 #config
